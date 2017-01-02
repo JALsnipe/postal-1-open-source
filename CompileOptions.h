@@ -452,6 +452,8 @@
 // current TARGET, LOCALE and SPAWN macros.
 ////////////////////////////////////////////////////////////////////////////////
 
+#define REQUIRE_POSTAL_CD 0
+
 #if defined(TARGET) && defined(LOCALE)
 
 	#if TARGET == JAPAN_ADD_ON
