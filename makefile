@@ -20,7 +20,7 @@ else ifeq ($(linux_x86),1)
   target := linux_x86
 else
   target := macosx_x86
-  steamworks := true
+  steamworks := false
 endif
 
 BINDIR := ./bin
@@ -271,8 +271,8 @@ else
 endif
 
 ifeq ($(strip $(macosx)),true)
-  CFLAGS += -arch i386 -mmacosx-version-min=10.5
-  LDFLAGS += -arch i386 -mmacosx-version-min=10.5
+  CFLAGS += -arch x86_64 -mmacosx-version-min=10.5
+  LDFLAGS += -arch x86_64 -mmacosx-version-min=10.5
   LDFLAGS += -framework CoreFoundation -framework Cocoa
   LIBS += SDL2/libs/macosx/libSDL2-2.0.0.dylib
   STEAMLDFLAGS += steamworks/sdk/redistributable_bin/osx32/libsteam_api.dylib
@@ -355,6 +355,7 @@ bindir :
 	mkdir -p $(BINDIR)/WishPiX/ResourceManager
 	mkdir -p $(BINDIR)/WishPiX/Spry
 	mkdir -p $(BINDIR)/libs
+	cp postal_plus.ini $(BINDIR)/POSTAL.INI
 
 distclean: clean
 
