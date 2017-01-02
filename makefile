@@ -355,7 +355,7 @@ bindir :
 	mkdir -p $(BINDIR)/WishPiX/ResourceManager
 	mkdir -p $(BINDIR)/WishPiX/Spry
 	mkdir -p $(BINDIR)/libs
-	cp postal_plus.ini $(BINDIR)/POSTAL.INI
+	cp DefaultPostal.ini $(BINDIR)/POSTAL.INI
 
 distclean: clean
 
